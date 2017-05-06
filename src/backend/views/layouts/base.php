@@ -5,10 +5,6 @@
 
 use backend\assets\AppAsset;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -24,7 +20,6 @@ AppAsset::register($this);
 </head>
 <body class="hold-transition login-page">
 <?php $this->beginBody() ?>
-    <?= Alert::widget() ?>
     <?= $content ?>
 <?php $this->endBody() ?>
 </body>

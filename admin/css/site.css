@@ -1,6 +1,6 @@
 html,
 body {
-    height: 100%;
+    height: auto;
 }
 
 .wrap {
@@ -129,4 +129,10 @@ a.desc:after {
     padding-bottom: 15px;
     color: #fff;
     text-decoration: none;
+}
+.login-box, .register-box {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }

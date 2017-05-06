@@ -13,6 +13,7 @@ return [
     'Address' => 'Địa chỉ',
     'Avatar' => 'Ảnh đại diện',
     'About Me' => 'Giới thiệu về tôi',
+    'Remember Me' => 'Ghi nhớ đăng nhập',
     'Status' => 'Trạng thái',
     'Active' => 'Kích hoạt',
     'Password' => 'Mật khẩu',
