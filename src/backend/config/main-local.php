@@ -19,6 +19,15 @@ if (!YII_ENV_TEST) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
+        'allowedIPs' => ['*'],
+        'generators' => [
+            'crud' => [
+                'class' => \yii\gii\generators\crud\Generator::class,
+                'templates' => [
+                    'OneCMS' => '@OneCMS/admin/gii/crud/default',
+                ]
+            ]
+        ],
     ];
 }
 

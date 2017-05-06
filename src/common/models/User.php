@@ -16,17 +16,28 @@ use yii\web\IdentityInterface;
  * @property string $password_reset_token
  * @property string $email
  * @property string $auth_key
+ * @property string $name
+ * @property string $phone
+ * @property string $address
+ * @property string $bio
+ * @property string $avatar
  * @property integer $status
+ * @property integer $roles
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $password write-only password
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
+    const STATUS_DEACTIVATED = 0;
+    const STATUS_ACTIVE = 1;
 
-
+    const ROLE_MEMBER = 'MEMBER';
+    const ROLE_EDITOR = 'EDITOR';
+    const ROLE_ACCOUNTANT = 'ACCOUNTANT';
+    const ROLE_MANAGER = 'MANAGER';
+    const ROLE_ADMIN = 'ADMIN';
+    const ROLE_SUPER_ADMIN = 'SUPER_ADMIN';
     /**
      * @inheritdoc
      */
@@ -52,7 +63,17 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DEACTIVATED]],
+
+            ['roles', 'default', 'value' => self::ROLE_MEMBER],
+            ['roles', 'in', 'range' => [
+                self::ROLE_MEMBER,
+                self::ROLE_EDITOR,
+                self::ROLE_ACCOUNTANT,
+                self::ROLE_MANAGER,
+                self::ROLE_ADMIN,
+                self::ROLE_SUPER_ADMIN
+            ]],
         ];
     }
 
@@ -73,14 +94,14 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * Finds user by username
+     * Finds user by email
      *
-     * @param string $username
+     * @param string $email
      * @return static|null
      */
-    public static function findByUsername($username)
+    public static function findByEmail($email)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['email' => $email, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
@@ -185,5 +206,40 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    public static function roles()
+    {
+        return [
+            self::ROLE_SUPER_ADMIN => Yii::t('app', 'Super Admin'),
+            self::ROLE_ADMIN => Yii::t('app', 'Admin'),
+            self::ROLE_MANAGER => Yii::t('app', 'Manager'),
+            self::ROLE_ACCOUNTANT => Yii::t('app', 'Accountant'),
+            self::ROLE_EDITOR => Yii::t('app', 'Editor'),
+            self::ROLE_MEMBER => Yii::t('app', 'Member'),
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Full Name'),
+            'phone' => Yii::t('app', 'Phone Number'),
+            'address' => Yii::t('app', 'Address'),
+            'avatar' => Yii::t('app', 'Avatar'),
+            'bio' => Yii::t('app', 'Bio'),
+            'email' => Yii::t('app', 'Email'),
+            'password_hash' => Yii::t('app', 'Password Hash'),
+            'password_reset_token' => Yii::t('app', 'Password Reset Token'),
+            'auth_key' => Yii::t('app', 'Auth Key'),
+            'roles' => Yii::t('app', 'Roles'),
+            'status' => Yii::t('app', 'Status'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
+        ];
     }
 }
