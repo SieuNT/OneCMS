@@ -15,11 +15,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model <?= ltrim($generator->modelClass, '\\') ?> */
 
-$this->title = <?= $generator->generateString(Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>;
+$this->title = <?= $generator->generateString('Create') ?>;
 $this->params['breadcrumbs'][] = ['label' => <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>, 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="panel-body <?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-create">
+<div class="box <?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-create">
 
     <?= "<?= " ?>$this->render('_form', [
         'model' => $model,

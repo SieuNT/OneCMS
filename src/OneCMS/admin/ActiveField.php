@@ -2,7 +2,6 @@
 
 namespace OneCMS\admin;
 
-use yii\bootstrap\ActiveField as BaseActiveField;
-
-class ActiveField extends BaseActiveField {
+class ActiveField extends \yii\bootstrap\ActiveField {
+    public $checkboxTemplate = '<div class="checkbox">{beginLabel}{input}<span class="text">{labelTitle}</span>{endLabel}{error}{hint}</div>';
 }

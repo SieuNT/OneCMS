@@ -14,13 +14,6 @@ body {
     padding: 70px 15px 20px;
 }
 
-.footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-}
-
 .jumbotron {
     text-align: center;
     background-color: transparent;
@@ -96,9 +89,14 @@ a.desc:after {
 }
 
 /* align the logout "link" (button in form) of the navbar */
-.nav li > form > button.logout {
-    padding: 15px;
+.nav li > form > button.btn-logout {
+    padding: 14px 10px;
+    color: #ffffff;
     border: none;
+}
+
+.nav li > form > button.btn-logout:hover {
+    text-decoration: none;
 }
 
 @media(max-width:767px) {
@@ -117,4 +115,18 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+/*-------CUSTOM Grid----------*/
+.header {
+    text-transform: uppercase;
+    color: #fff0f0;
+}
+.grid-view .summary {
+    padding: 5px 15px;
+}
+.btn-logout {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    text-decoration: none;
 }

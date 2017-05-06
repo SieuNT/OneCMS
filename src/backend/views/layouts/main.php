@@ -4,12 +4,9 @@
 /* @var $content string */
 
 use backend\assets\AppAsset;
-use vcms\admin\Menu;
+use OneCMS\admin\Menu;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -20,14 +17,14 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?> | vCMS</title>
+    <title><?= Html::encode($this->title) ?> | OneCMS</title>
     <?php $this->head() ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">
-        <?= Html::a('<span class="logo-mini"><b>v</b>CMS</span><span class="logo-lg"><b>v</b>CMS</span>', ['site/index'], ['class' => 'logo']) ?>
+        <?= Html::a('<span class="logo-mini"><b>O</b>ne</span><span class="logo-lg"><b>One</b>CMS</span>', ['site/index'], ['class' => 'logo']) ?>
         <nav class="navbar navbar-static-top">
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
@@ -121,7 +118,7 @@ AppAsset::register($this);
                     <li class="dropdown user user-menu">
                         <?= Html::beginForm(['/site/logout'], 'post')
                         . Html::submitButton(
-                            '<i class="fa fa-user"></i> Thoát (' . Yii::$app->user->identity->full_name . ')',
+                            '<i class="fa fa-user"></i> Thoát (' . Yii::$app->user->identity->name . ')',
                             [
                                 'class' => 'btn btn-link btn-logout'
                             ]

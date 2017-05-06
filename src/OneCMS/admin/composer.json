@@ -1,0 +1,26 @@
+{
+  "name": "ideasvn/yii2-admin",
+  "authors": [
+    {
+      "name": "Nguyen Tuan Sieu",
+      "email": "ideasvn@hotmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/fontawesome": "^4.6",
+    "bower-asset/ionicons": "^2.0",
+    "bower-asset/jquery": "^2.1"
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "ideasvn\\admin\\": ""
+    }
+  }
+}

@@ -2,8 +2,6 @@
 
 namespace OneCMS\admin;
 
-use yii\bootstrap\ActiveForm as BaseActiveForm;
-
-class ActiveForm extends BaseActiveForm {
+class ActiveForm extends \yii\bootstrap\ActiveForm {
     public $fieldClass = 'OneCMS\admin\ActiveField';
 }
