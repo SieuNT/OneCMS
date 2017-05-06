@@ -13,7 +13,7 @@ use yii\helpers\Json;
  *
  * @package yii2mod\alert
  */
-class Alert extends Widget
+class SweetAlert extends Widget
 {
     /**
      * Info type of the alert

@@ -19,6 +19,7 @@ class m130524_201442_init extends Migration
             'password_reset_token' => $this->string()->unique(),
             'auth_key' => $this->string(32)->notNull(),
             'name' => $this->string(70)->notNull(), //Min 2 max 70
+            'gender' => $this->smallInteger(3)->notNull()->defaultValue(0)->comment('0 - Male, 1 - Female, 2 - Other'), //Min 2 max 70
             'phone' => $this->string(30)->null(), //Min 3 max 30
             'address' => $this->string()->null(),
             'avatar' => $this->string()->null(),

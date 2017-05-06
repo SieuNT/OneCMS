@@ -55,6 +55,11 @@ return [
                 'roles' => [User::ROLE_SUPER_ADMIN],
             ],
             [
+                'controllers' => ['debug/default'],
+                'allow' => true,
+                'roles' => [User::ROLE_SUPER_ADMIN],
+            ],
+            [
                 'controllers' => ['site'],
                 'allow' => true,
                 'actions' => ['login'],

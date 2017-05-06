@@ -147,7 +147,7 @@ AppAsset::register($this);
             <h1>
                 <?= $this->title ?>
             </h1>
-            <?= \OneCMS\sweetalert\SweetAlertAsset::className() ?>
+            <?= \OneCMS\sweetalert\SweetAlert::widget() ?>
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>

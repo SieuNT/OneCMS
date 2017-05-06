@@ -19,4 +19,5 @@ return [
     'Password' => 'Mật khẩu',
     'Password Confirm' => 'Xác nhận mật khẩu',
     'Deactivated' => 'Ngừng kích hoạt',
+    'Roles' => 'Quyền hạn',
 ];
