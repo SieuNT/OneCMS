@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCMS\behaviors;
+namespace onecms\behaviors;
 
 use Yii;
 use yii\base\Behavior;

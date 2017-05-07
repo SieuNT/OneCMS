@@ -1,5 +1,5 @@
 <?php
-namespace OneCMS\admin;
+namespace onecms\admin;
 
 use yii\web\AssetBundle;
 /**

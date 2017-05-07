@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCMS\admin;
+namespace onecms\admin;
 
 class ActionColumn extends \yii\grid\ActionColumn {
 

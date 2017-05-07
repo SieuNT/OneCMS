@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCMS\admin;
+namespace onecms\admin;
 
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;

@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCMS\sweetalert;
+namespace onecms\sweetalert;
 
 use Yii;
 use yii\base\InvalidConfigException;

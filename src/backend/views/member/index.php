@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use OneCMS\admin\GridView;
+use onecms\admin\GridView;
 use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */

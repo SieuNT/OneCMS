@@ -3,7 +3,7 @@
 namespace console\controllers;
 
 use common\models\User;
-use OneCMS\rbac\OwnModelRule;
+use onecms\rbac\OwnModelRule;
 use yii\console\Controller;
 use yii\db\Exception;
 use yii\helpers\Console;

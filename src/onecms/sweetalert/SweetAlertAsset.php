@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCMS\sweetalert;
+namespace onecms\sweetalert;
 
 use yii\web\AssetBundle;
 
@@ -9,7 +9,7 @@ class SweetAlertAsset extends AssetBundle
     /**
      * @var string the directory that contains the source asset files for this asset bundle
      */
-    public $sourcePath = '@OneCMS/sweetalert/assets';
+    public $sourcePath = '@onecms/sweetalert/assets';
 
     /**
      * @var array list of JavaScript files that this bundle contains

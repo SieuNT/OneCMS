@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCMS\admin;
+namespace onecms\admin;
 use yii\grid\GridView as BaseGridView;
 use yii\helpers\Html;
 

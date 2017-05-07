@@ -13,7 +13,7 @@ echo "<?php\n";
 ?>
 
 use yii\helpers\Html;
-use <?= $generator->indexWidgetType === 'grid' ? "OneCMS\\admin\\GridView" : "OneCMS\\admin\\ListView" ?>;
+use <?= $generator->indexWidgetType === 'grid' ? "onecms\\admin\\GridView" : "onecms\\admin\\ListView" ?>;
 <?= $generator->enablePjax ? 'use yii\widgets\Pjax;' : '' ?>
 
 /* @var $this yii\web\View */

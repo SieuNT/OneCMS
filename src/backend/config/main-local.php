@@ -25,7 +25,7 @@ if (!YII_ENV_TEST) {
             'crud' => [
                 'class' => \yii\gii\generators\crud\Generator::class,
                 'templates' => [
-                    'OneCMS' => '@OneCMS/admin/gii/crud/default',
+                    'OneCMS' => '@onecms/admin/gii/crud/default',
                 ]
             ]
         ],

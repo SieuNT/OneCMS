@@ -47,7 +47,7 @@ return [
         ],
     ],
     'as globalAccess' => [
-        'class' => \OneCMS\behaviors\GlobalAccessBehavior::className(),
+        'class' => \onecms\behaviors\GlobalAccessBehavior::className(),
         'rules' => [
             [
                 'controllers' => ['gii/default'],

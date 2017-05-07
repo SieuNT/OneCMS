@@ -4,7 +4,7 @@
 /* @var $content string */
 
 use backend\assets\AppAsset;
-use OneCMS\admin\Menu;
+use onecms\admin\Menu;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 
@@ -147,7 +147,7 @@ AppAsset::register($this);
             <h1>
                 <?= $this->title ?>
             </h1>
-            <?= \OneCMS\sweetalert\SweetAlert::widget() ?>
+            <?= \onecms\sweetalert\SweetAlert::widget() ?>
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>

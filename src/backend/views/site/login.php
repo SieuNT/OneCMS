@@ -1,11 +1,11 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $form OneCMS\admin\ActiveForm */
+/* @var $form onecms\admin\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
 use yii\helpers\Html;
-use OneCMS\admin\ActiveForm;
+use onecms\admin\ActiveForm;
 
 $this->title = Yii::t('app', 'Login');
 $this->params['breadcrumbs'][] = $this->title;

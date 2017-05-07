@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCMS\rbac;
+namespace onecms\rbac;
 
 use yii\rbac\Item;
 use yii\rbac\Rule;
